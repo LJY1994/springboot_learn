@@ -2,14 +2,12 @@ package cn.sf.springboot_mysql_mybatis.entity;
 
 /**
  * Description:
- * Company: 顺丰科技有限公司国际业务科技部
+ * Company:
  *
  * @Author: 01384657
  * Date: 2019/3/12 16:07
  */
 public class User {
-
-    private int id;
 
     private String userCardId;
 
@@ -36,14 +34,6 @@ public class User {
 
     public void setUserDesc(String userDesc) {
         this.userDesc = userDesc;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUserCardId() {
@@ -73,8 +63,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", userCardId='" + userCardId + '\'' +
+                "userCardId='" + userCardId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", userAge=" + userAge +
                 '}';

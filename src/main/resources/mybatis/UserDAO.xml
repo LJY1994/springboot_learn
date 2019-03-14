@@ -8,7 +8,7 @@
         <result property="userDesc" column="author_desc" jdbcType="VARCHAR"/>
         <result property="userAge" column="author_age" jdbcType="TINYINT"/>
     </resultMap>
-    <insert id="addUser" parameterType="User">
+    <insert id="addUser" parameterType="cn.sf.springboot_mysql_mybatis.entity.User">
       INSERT INTO author_list(author_card, author_name, author_desc, author_age )
       VALUES (#{userCardId},#{userName},#{userDesc},#{userAge})
     </insert>
