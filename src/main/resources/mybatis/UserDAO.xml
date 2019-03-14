@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sf.springboot_mysql_mybatis.dao.UserDAO">
+
+    <resultMap id="UserResultMap" type="cn.sf.springboot_mysql_mybatis.entity.User">
+        <result property="userCardId" column="author_card" jdbcType="VARCHAR"/>
+        <result property="userName" column="author_name" jdbcType="VARCHAR"/>
+        <result property="userDesc" column="author_desc" jdbcType="VARCHAR"/>
+        <result property="userAge" column="author_age" jdbcType="TINYINT"/>
+    </resultMap>
+    <insert id="addUser" parameterType="User">
+      INSERT INTO author_list(author_card, author_name, author_desc, author_age )
+      VALUES (#{userCardId},#{userName},#{userDesc},#{userAge})
+    </insert>
+
+    <select id="getUsers" resultMap="UserResultMap" >
+      SELECT *
+      FROM author_list
+    </select>
+
+    <select id="getUserInfo" parameterType="String" resultMap="UserResultMap">
+      SELECT author_card, author_name, author_desc, author_age
+      FROM author_list
+      WHERE author_name = #{name}
+    </select>
+
+</mapper>
