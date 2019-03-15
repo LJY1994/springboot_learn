@@ -1,4 +1,4 @@
-package cn.sf.springboot_mysql_mybatis;
+package cn.sf.springbootdemo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
   */
 
 @SpringBootApplication
-@MapperScan("cn.sf.springboot_mysql_mybatis.dao")
+@MapperScan("cn.sf.springbootdemo.dao")
 public class SpringbootMysqlMybatisApplication {
 
     public static void main(String[] args) {

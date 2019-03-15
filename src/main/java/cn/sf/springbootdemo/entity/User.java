@@ -1,4 +1,9 @@
-package cn.sf.springboot_mysql_mybatis.entity;
+package cn.sf.springbootdemo.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Description:
@@ -7,14 +12,26 @@ package cn.sf.springboot_mysql_mybatis.entity;
  * @Author: 01384657
  * Date: 2019/3/12 16:07
  */
+@Entity
 public class User {
 
+    public Integer getId() {
+        return id;
+    }
+
+    @Id
+    @GeneratedValue
+    private Integer id;
+
+    @Column(nullable = false)
     private String userCardId;
 
+    @Column(nullable = false)
     private String userName;
 
     private String userDesc;
 
+    @Column(nullable = false)
     private int userAge;
 
     public User(){

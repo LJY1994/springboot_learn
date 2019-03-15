@@ -1,6 +1,6 @@
-package cn.sf.springboot_mysql_mybatis.service;
+package cn.sf.springbootdemo.service;
 
-import cn.sf.springboot_mysql_mybatis.entity.User;
+import cn.sf.springbootdemo.entity.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

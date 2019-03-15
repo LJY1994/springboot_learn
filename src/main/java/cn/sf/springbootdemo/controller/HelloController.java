@@ -1,7 +1,7 @@
-package cn.sf.springboot_mysql_mybatis.controller;
+package cn.sf.springbootdemo.controller;
 
-import cn.sf.springboot_mysql_mybatis.entity.User;
-import cn.sf.springboot_mysql_mybatis.service.UserService;
+import cn.sf.springbootdemo.entity.User;
+import cn.sf.springbootdemo.service.UserService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

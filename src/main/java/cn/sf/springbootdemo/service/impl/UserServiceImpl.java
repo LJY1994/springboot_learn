@@ -1,8 +1,8 @@
-package cn.sf.springboot_mysql_mybatis.service.impl;
+package cn.sf.springbootdemo.service.impl;
 
-import cn.sf.springboot_mysql_mybatis.dao.UserDAO;
-import cn.sf.springboot_mysql_mybatis.entity.User;
-import cn.sf.springboot_mysql_mybatis.service.UserService;
+import cn.sf.springbootdemo.dao.UserDAO;
+import cn.sf.springbootdemo.entity.User;
+import cn.sf.springbootdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

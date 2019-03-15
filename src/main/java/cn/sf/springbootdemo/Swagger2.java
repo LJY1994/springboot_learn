@@ -1,4 +1,4 @@
-package cn.sf.springboot_mysql_mybatis;
+package cn.sf.springbootdemo;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +27,7 @@ public class Swagger2 {
                 .apiInfo(apiInfo())
                 .select()
                 //指定了 Swagger 的扫描包名
-                .apis(RequestHandlerSelectors.basePackage("cn.sf.springboot_mysql_mybatis"))
+                .apis(RequestHandlerSelectors.basePackage("cn.sf.springbootdemo"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -35,7 +35,7 @@ public class Swagger2 {
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
                 .title("springboot 中使用Swagger2 构建API文档")
-                .description("1")
+                .description("")
                 .termsOfServiceUrl("127.0.0.1")
                 .contact("jy")
                 .version("0.1")

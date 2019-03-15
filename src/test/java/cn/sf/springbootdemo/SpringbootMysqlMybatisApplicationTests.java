@@ -1,6 +1,6 @@
-package cn.sf.springboot_mysql_mybatis;
+package cn.sf.springbootdemo;
 
-import cn.sf.springboot_mysql_mybatis.controller.HelloController;
+import cn.sf.springbootdemo.controller.HelloController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ public class SpringbootMysqlMybatisApplicationTests {
     @Autowired
     private HelloController helloController;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         mvc = MockMvcBuilders.standaloneSetup(helloController).build();
     }
 

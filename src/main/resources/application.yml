@@ -12,9 +12,12 @@ spring:
       suffix: .ftl
 
   jpa:
-    hibernate:
-      ddl-auto: update # 数据库连接必备的参数？
-
+ #   hibernate:
+#      ddl-auto: update # 数据库连接必备的参数？
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop #自动创建、更新、验证数据库表结构
 mybatis:
   mapper-locations: classpath:/mybatis/*.xml
-  type-aliases-package: cn.sf.springboot_mysql_mybatis.entity
+  type-aliases-package: cn.sf.springbootdemo.entity

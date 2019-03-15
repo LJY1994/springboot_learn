@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.sf.springboot_mysql_mybatis.dao.UserDAO">
+<mapper namespace="cn.sf.springbootdemo.dao.UserDAO">
 
-    <resultMap id="UserResultMap" type="cn.sf.springboot_mysql_mybatis.entity.User">
+    <resultMap id="UserResultMap" type="cn.sf.springbootdemo.entity.User">
         <result property="userCardId" column="author_card" jdbcType="VARCHAR"/>
         <result property="userName" column="author_name" jdbcType="VARCHAR"/>
         <result property="userDesc" column="author_desc" jdbcType="VARCHAR"/>
         <result property="userAge" column="author_age" jdbcType="TINYINT"/>
     </resultMap>
-    <insert id="addUser" parameterType="cn.sf.springboot_mysql_mybatis.entity.User">
+    <insert id="addUser" parameterType="cn.sf.springbootdemo.entity.User">
       INSERT INTO author_list(author_card, author_name, author_desc, author_age )
       VALUES (#{userCardId},#{userName},#{userDesc},#{userAge})
     </insert>
